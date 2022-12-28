@@ -13,4 +13,4 @@
   - `リージョン` を `asia-northeast1` にする
   - `すべてのトラフィックを許可` を選択
   - `未認証の呼び出しを許可` を選択
-  - `作成` を選択
+  - `作成` を選択 → [サービス](https://console.cloud.google.com/run/detail/asia-northeast1/glossary-web/revisions?project=glossary-web), [Web サイト](https://glossary-web-3r4hyx5lea-an.a.run.app/)
