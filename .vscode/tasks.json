@@ -3,11 +3,20 @@
   "tasks": [
     {
       "type": "npm",
+      "script": "install",
+      "path": "app",
+      "problemMatcher": [],
+      "label": "npm: install - app",
+      "detail": "依存関係などをインストールします (初回または package.json 更新時のみ必要)"
+    },
+    {
+      "type": "npm",
       "script": "dev",
       "path": "app",
       "problemMatcher": [],
       "label": "npm: dev - app",
-      "detail": "開発用ローカル Web サーバー (同時に常時監視＆コンパイルします)"
+      "detail": "開発用ローカル Web サーバー (同時に常時監視＆コンパイルします)",
+      "dependsOn": ["npm: install - app"]
     }
   ]
 }
