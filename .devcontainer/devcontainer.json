@@ -1,5 +1,15 @@
 {
   "image": "mcr.microsoft.com/devcontainers/typescript-node:16",
+
+  // パフォーマンスのため、npm, SvelteKit が書き込むファイルをボリューム側にするように
+  "mounts": [
+    "source=glossary-web_app_node_modules,target=${containerWorkspaceFolder}/app/node_modules,type=volume",
+    "source=glossary-web_app_svelte-kit,target=${containerWorkspaceFolder}/app/.svelte-kit,type=volume"
+  ],
+  "remoteUser": "node",
+  "postCreateCommand": "sudo chown node ${containerWorkspaceFolder}/app/node_modules ${containerWorkspaceFolder}/app/.svelte-kit",
+
+  // VS Code の共通設定
   "customizations": {
     "vscode": {
       "extensions": [
