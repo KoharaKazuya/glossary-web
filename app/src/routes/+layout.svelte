@@ -11,3 +11,9 @@
 </TopAppBar>
 
 <main><slot /></main>
+
+<style>
+	main {
+		padding: 1em;
+	}
+</style>
